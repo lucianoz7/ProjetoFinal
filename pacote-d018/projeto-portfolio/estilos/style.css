@@ -11,7 +11,7 @@
   --textoInverso: #ffffff;
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
-  --fundo-Card: #ffffff;
+  --fundoCard: #ffffff;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 header {
   background-color: var(--destaque);
   color: var(--texto);
-  padding: 10px;
+  padding: 18px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -36,18 +36,87 @@ ul {
   gap: 10px;
 }
 
-a {
+li > a {
   text-decoration: none;
   color: var(--textoInverso);
   font-weight: 600;
   padding: 12px 15px;
   border-radius: 5px;
+  transition-duration: 0.2s;
+  font-size: 1.2em;
+}
+
+li > a:hover {
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 90% 1fr;
+}
+
+#ficha {
+  background-color: var(--fundoCard);
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 8px;
+  text-align: justify;
+  grid-column: 2 / 3;
+}
+
+#ficha > img.foto {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 5px solid var(--fundoCard);
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#ficha > h1 {
+  color: var(--destaque);
+  margin: 15px 0px;
+  font-size: 1.8em;
+  text-align: left;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  margin-top: 20px;
+  gap: 1em;
+}
+
+#social > a {
+  color: var(--destaque);
   transition-duration: 0.3s;
 }
 
-a:hover {
-  background-color: var(--destaque-inverso);
+#social > a:hover {
+  color: var(--destaque-inverso);
+}
+
+#detalhes {
+  grid-column: 2 / 3;
+}
+
+article {
+  background-color: var(--fundoCard);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+article > h2 {
   color: var(--destaque);
+  margin-bottom: 10px;
 }
 
 /* 
