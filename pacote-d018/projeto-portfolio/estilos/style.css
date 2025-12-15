@@ -21,6 +21,15 @@ body {
   color: var(--texto);
 }
 
+.escuro {
+  --fundoPrincipal: #222222;
+  --texto: #e0e0e0;
+  --textoInverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundoCard: #444444;
+}
+
 header {
   background-color: var(--destaque);
   color: var(--texto);
@@ -62,7 +71,7 @@ main {
 #ficha {
   background-color: var(--fundoCard);
   padding: 20px;
-  margin: 20px 0px;
+  margin-top: 20px;
   border-radius: 8px;
   text-align: justify;
   grid-column: 2 / 3;
@@ -109,6 +118,7 @@ main {
 
 #detalhes {
   grid-column: 2 / 3;
+  margin-top: 20px;
 }
 
 article {
@@ -237,7 +247,7 @@ footer > a:hover {
   
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -254,4 +264,22 @@ footer > a:hover {
   .projeto > .foto {
     max-width: 20%;
   }
+
+  main {
+    grid-template-columns: auto 445px 1fr auto;
+    gap: 15px;
+  }
+
+  #ficha {
+    height: fit-content;
+    grid-column:  2/3;
+    position: sticky;
+    top: 70px;
+    margin-bottom: 20px;
+  }
+
+  #detalhes {
+    grid-column: 3/4;
+  }
+  
 }
